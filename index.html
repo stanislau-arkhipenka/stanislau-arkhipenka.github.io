@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        <link rel="canonical" href="https://zzbot.lolez.net/">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>zzBot</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atelier-dune-light.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">zzBot</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="about/" class="nav-link">Self</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="projects/hexapod/" class="dropdown-item">Hexapod</a>
+</li>
+                                    
+<li>
+    <a href="projects/rc_controller/" class="dropdown-item">RC Controller</a>
+</li>
+                                    
+<li>
+    <a href="projects/rc_tank_2/" class="dropdown-item">RC Tank 2</a>
+</li>
+                                    
+<li>
+    <a href="projects/rc_tank_1/" class="dropdown-item">RC Tank 1</a>
+</li>
+                                    
+<li>
+    <a href="projects/robot/" class="dropdown-item">Robot</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="misc/" class="nav-link">Misc</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#welcome-to-zzbot" class="nav-link">Welcome to zzbot</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#steam-deck-as-a-new-controller" class="nav-link">Steam Deck as a new controller</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#search-and-rescue-walking-robot" class="nav-link">Search and rescue walking robot</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#rc-tank-2" class="nav-link">RC Tank 2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#over-engineering" class="nav-link">Over-engineering</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#rc-tank" class="nav-link">RC Tank</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#true-story" class="nav-link">True Story</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-zzbot">Welcome to zzbot</h1>
+<h2 id="steam-deck-as-a-new-controller">Steam Deck as a new controller</h2>
+<p>Hey everyone! Recently I shipped an update to robot’s software, now it can be controlled from a steam deck!</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4RgZNf61RFY?si=DwJmpsrJW51wGskb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="search-and-rescue-walking-robot">Search and rescue walking robot</h2>
+<p>Hey! Checkout my new robot! It’s a hexapod (<a href="projects/hexapod/">And how to build it</a>)!</p>
+<p><img alt="hexapod image" src="img/hexapod_post.png" /> </p>
+<p>This robot was originally designed by <a href="https://www.thingiverse.com/thing:4674598">AlexKorvin at thingiverse</a>.
+When I first saw the robot – I instantly decided to build one. But when I learned more about it- I decided not just build it, but redesigned it a little bit and to significantly improve electronics.</p>
+<p>Originally proposed solution (by AlexKorvin):</p>
+<ul>
+<li>Arduino for control</li>
+<li>Separate transmitter for live video</li>
+<li>PS-2 controller + RC hardware for remote control</li>
+</ul>
+<p>I didn’t like following designed decisions:</p>
+<ul>
+<li>Use multiple separate systems to transfer signal (video and controls)</li>
+<li>Use old PS-2 controllers from aliexpress</li>
+<li>Lack of persistent storage for configuration</li>
+</ul>
+<p>So I decided to redesign it.</p>
+<p>I took the original firmware from the Thingiverse project (C code for arduino) and completely rewrote it in python, alongside fixing some bugs and improving functionality. The code here.</p>
+<p>I also designed a <a href="https://www.thingiverse.com/thing:5419986">few additional parts</a> to mount Raspberry Pi and PWM boards.</p>
+<p>Also checkout detailed instructions on <strong>how to build</strong> it! #TODO</p>
+<h2 id="rc-tank-2">RC Tank 2</h2>
+<p>So it turned out that some guy from thingiverse called Staind made <a href="https://www.thingiverse.com/thing:2414983">new revision of RC Tank</a>.</p>
+<p>I thought it will be great opportunity to spend little bit more time with my descendants by printing and then building this tank together. Meet RC Tank 2 (for now without electronics, but I’ll fix this latter)
+<img alt="RC Tank 2 image" src="img/rc_tank_2_post.png" /></p>
+<p>It is bigger, heavier but also has some drastic improvements:</p>
+<ul>
+<li>Designed for brush-less drivers (less power consumption, less heat)</li>
+<li>Ability to adjust track tension (it really cool, because over the time tracks become loos and you may face driving wheel slipping problem)</li>
+<li>Mountpoint for GoPro</li>
+<li>Much easier assembly</li>
+</ul>
+<p>I thought it is also a good point to try new remote control protocol. So instead of Raspberry PI and WiFi I decided to use Arduino and NRF24L01 modules. Is is also implies that I will be unable to use android phone to control the tank (like with previous one) and most likely i will need to build RC Controller. But I’ll figure it out later</p>
+<h2 id="over-engineering">Over-engineering</h2>
+<p>So I received my youtube bottle and unfortunately it arrived with broken cap. Here is short video how problem have been solved.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MDBMRrAu5us?si=yZ6fEbOept8pNd5q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="rc-tank">RC Tank</h2>
+<p>So I found some pretty interesting project on thingiverse called RC Tank. Basically it is self-propelled tracking platform. It is assumed to use general RC equipment, but I decided to go another way.</p>
+<p><img alt="rc tank 1" src="img/rc_tank_1_post.jpg" /></p>
+<p>Noticed that small white part right in the center of the tank. Under this white cover you will find main electronics</p>
+<p><img alt="rc tank 1 electronics" src="img/rc_tank_1_2_post.png" /></p>
+<p>More details you can find on <a href="projects/rc_tank_1/">RC Tank project page</a></p>
+<h2 id="true-story">True Story</h2>
+<p>So basically I decided to recreate this blog once again (4th time).</p>
+<p>Let’s start with true, but very sad story about ambitious, but failed project. This is a story about how I tried to build fully sized humanoid robot. <a href="projects/robot/">Take a look</a></p>
+<p><img alt="robot" src="img/robot_post.jpg" /></p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js"></script>
+        <script src="search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.5.3
+Build Date UTC : 2023-10-06 21:50:10.931685+00:00
+-->

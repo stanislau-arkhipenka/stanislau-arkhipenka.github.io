@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://zzbot.lolez.net/projects/hexapod/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Hexapod - zzBot</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atelier-dune-light.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">zzBot</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../../about/" class="nav-link">Self</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Hexapod</a>
+</li>
+                                    
+<li>
+    <a href="../rc_controller/" class="dropdown-item">RC Controller</a>
+</li>
+                                    
+<li>
+    <a href="../rc_tank_2/" class="dropdown-item">RC Tank 2</a>
+</li>
+                                    
+<li>
+    <a href="../rc_tank_1/" class="dropdown-item">RC Tank 1</a>
+</li>
+                                    
+<li>
+    <a href="../robot/" class="dropdown-item">Robot</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../misc/" class="nav-link">Misc</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../about/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../rc_controller/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#hexapod" class="nav-link">Hexapod</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#summary" class="nav-link">Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-you-will-need-to-do" class="nav-link">What you will need to do</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#components-from-bill-of-materials-bom" class="nav-link">Components from bill of materials (BOM)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#3d-print-parts" class="nav-link">3d print parts</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#print" class="nav-link">Print</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#software" class="nav-link">Software</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#assembly-everything" class="nav-link">Assembly Everything</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#how-to-calibrate" class="nav-link">How to calibrate</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="hexapod">Hexapod</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1BoUeCcXomw?si=9_iwbrfBzuSkSfpP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<h2 id="summary">Summary</h2>
+<p>This page describes how to build a “search and rescue walking robot (APC -1). It was originally designed by AlexKorvin and published at thingiverse. As the original author pointed out – of course it’s not a real rescue robot. It’s just a cute concept of what it may look like.</p>
+<p>On this page you will find complete instructions now to build such a robot.</p>
+<h2 id="what-you-will-need-to-do">What you will need to do</h2>
+<ul>
+<li>Buy components from bill of materials (BOM)</li>
+<li>3d printed <a href="hexapod_stl.zip">parts</a></li>
+<li>Install and configure software</li>
+<li>Assemble robot</li>
+</ul>
+<h2 id="components-from-bill-of-materials-bom">Components from bill of materials (BOM)</h2>
+<ul>
+<li>19x Original MG92B - http://ali.pub/53ndy7</li>
+<li>1x Original MG996R - http://ali.pub/5b88a1</li>
+<li>LEDs - http://ali.pub/5cp7r9<ul>
+<li>6x Yellow</li>
+<li>6x Red</li>
+<li>2x White</li>
+</ul>
+</li>
+<li>14x 100 Ohm Resistors (for LEDs) - http://ali.pub/5cp7ww</li>
+<li>Breadboard for head power distribution</li>
+<li>2x Power keys (mosfets) - http://ali.pub/5b8ahy</li>
+<li>1x charge indicator - http://ali.pub/5b890o</li>
+<li>2x Cooler 4010 - http://ali.pub/5b8drz</li>
+<li>Carbon tubes (5x3x400 mm) - http://ali.pub/5b8bxa</li>
+<li>18x Bearing MF63ZZ (3x6x2.5 mm) - http://ali.pub/53o9wx</li>
+<li>1x Head Mount Bearing (F604zz) - http://ali.pub/5cpa6d</li>
+<li>30x Cage nuts \ bushings (M3x6) - http://ali.pub/4suuwh</li>
+<li>36x Screws M2x8 - http://ali.pub/49vq4i</li>
+<li>36x Nuts M2 - http://ali.pub/49vq1e</li>
+<li>Screws m3 - https://www.aliexpress.com/item/10000150053486.html </li>
+<li>1x XT60 Connector - http://ali.pub/5cpai8</li>
+<li>JST connectors - http://ali.pub/510ugc</li>
+<li>Wires:<ul>
+<li>16 AWG - https://www.aliexpress.com/item/1005001568846789.html </li>
+<li>20 AWG - https://www.aliexpress.com/item/1005001568846789.html </li>
+</ul>
+</li>
+<li>Nylon braid:<ul>
+<li>8mm - https://www.aliexpress.com/item/32883104236.html </li>
+<li>5mm - https://www.aliexpress.com/item/32883104236.html </li>
+</ul>
+</li>
+<li>1x Power Supply - https://www.aliexpress.com/item/32851821363.html </li>
+<li>1x Raspberry Pi Zero W - https://www.raspberrypi.com/products/raspberry-pi-zero-w/ </li>
+<li>1x MicroSD card 16Gb</li>
+<li>2x PWM 16 channel control board – https://www.adafruit.com/product/815</li>
+</ul>
+<h2 id="3d-print-parts">3d print parts</h2>
+<p><a href="hexapod_stl.zip">Download STL files</a></p>
+<h2 id="print">Print</h2>
+<h3 id="black">Black</h3>
+<ul>
+<li>Base\1x base_connector_v2.stl</li>
+<li>Base\1x Base filter part 1</li>
+<li>Base\1x Base filter part 2</li>
+<li>Base\1x Base Servo Mount (Center)</li>
+<li>Base\1x Base Servo Mount (Front)</li>
+<li>Base\1x Base Servo Mount (Rear)</li>
+<li>Base\1x Charger cover</li>
+<li>Base\1x Head servo Mount  MG996</li>
+<li>Base\1x Middle Base cover (with bearing) V1.1</li>
+<li>Base\1x Upper bearing cover</li>
+<li>Head\1x Back protection</li>
+<li>Head\1x bottom protection</li>
+<li>Head\1x Cable fixing</li>
+<li>Head\1x Charge indicator cover</li>
+<li>Head\1x Flashlight lens retainer</li>
+<li>Head\1x head_electric_mount</li>
+<li>Head\1x Head Mount V1.1</li>
+<li>Head\1x Mount for camera and flashlight</li>
+<li>Head\1x Top Protection</li>
+<li>Head\2x Filter holder</li>
+<li>Head\2x Retainer for small lamp lens</li>
+<li>Head\2x Ventilation cover</li>
+<li>Legs\3x TIBIA V1.1 left</li>
+<li>Legs\3x TIBIA V1.1 right</li>
+<li>Legs\6x COXA (part 1)</li>
+<li>Legs\6x COXA (part 2)</li>
+</ul>
+<h3 id="silver-or-gray">Silver or gray</h3>
+<ul>
+<li>Head\1x Head base (one piece)</li>
+<li>Head\1x Left side</li>
+<li>Head\1x right side</li>
+<li>Legs\3x FEMUR left</li>
+<li>Legs\3x FEMUR right</li>
+</ul>
+<h3 id="accent-color">Accent color</h3>
+<ul>
+<li>Base\1x Base</li>
+<li>Base\1x Front Base Cover</li>
+<li>Base\1x Rear base cover</li>
+<li>Head\1x Head cover left</li>
+<li>Head\1x Head cover right</li>
+</ul>
+<h3 id="transparent-or-white">Transparent or White</h3>
+<ul>
+<li>Base\2x Marker light for head</li>
+<li>Base\6x Marker light for leg</li>
+<li>Legs\3x TIBIA V1.1 left cover</li>
+<li>Legs\3x TIBIA V1.1 right cover</li>
+</ul>
+<h3 id="rubber-or-soft-plastic">Rubber or soft plastic</h3>
+<ul>
+<li>Legs\6x tip of the leg</li>
+</ul>
+<h2 id="software">Software</h2>
+<h3 id="install-and-configure-raspbian">Install and configure Raspbian</h3>
+<p>There are tons of installation guides on the internet. Just google it (For me the first link in google was <a href="https://thepi.io/how-to-install-raspbian-on-the-raspberry-pi/">this site</a>). We need headless mode (without graphical interface)</p>
+<h3 id="configure-raspbian">Configure Raspbian</h3>
+<ul>
+<li><a href="https://roboticsbackend.com/enable-ssh-on-raspberry-pi-raspbian/">Enable ssh</a> (though file modification on sd card)</li>
+<li><a href="https://howchoo.com/g/ndy1zte2yjn/how-to-set-up-wifi-on-your-raspberry-pi-without-ethernet">Enable wifi</a> (though file modification on sd card)</li>
+<li>Connect using ssh</li>
+<li><a href="https://github.com/atar-axis/xpadneo">Configure Xbox One controller support</a> and pair controller</li>
+<li>Edit <code>/etc/bluetooth/main.conf</code> and set:</li>
+</ul>
+<pre><code>[General]
+ControllerMode = dual
+Privacy = device
+</code></pre>
+<h3 id="install-apc-1-software">Install APC-1 software</h3>
+<ul>
+<li>Clone <a href="https://github.com/stanislau-arkhipenka/arr">code repository</a></li>
+<li>Install all dependencies from requirements.txt (preferably in <a href="https://docs.python.org/3/tutorial/venv.html">virtualenv</a>)</li>
+</ul>
+<h2 id="assembly-everything">Assembly Everything</h2>
+<p>You’ll primarily need to follow <a href="https://www.youtube.com/watch?v=M3o6ToZ4Auc&amp;feature=youtu.be">this guide</a>. Except few notable difference:
+* Mount of electronics in base
+* Mount of electronics in head</p>
+<p>Optional changes, that I personally recommend:
+* Use braided sleeving instead shrinking tube (it looks and feels better)
+* Do not cut servo wires. There is enough room to keep it inplace</p>
+<h3 id="base-electronics">Base electronics</h3>
+<p>Use base_connector_v2 to mount all internal electronics before putting it into base. It should look like this:
+<img alt="electronics base" src="electronics_base.jpg" /></p>
+<p>After that insert base_connector into base chassis, you should get something like this:
+<img alt="assembled electronics" src="assembled_electronics.jpg" /></p>
+<p>Servo connection orider: TBD</p>
+<h3 id="head-electronics">Head electronics</h3>
+<p>Use a small breadboard to create a power distribution circuit (5v). Use head_electric mount to mount all of your electronics <strong>before</strong> putting it into the head. You should get something like this:</p>
+<p><img alt="head electronics" src="head_electronics.jpg" /></p>
+<h2 id="how-to-calibrate">How to calibrate</h2>
+<ul>
+<li>Press a calibration button to switch robot in calibration mode</li>
+<li>Use vertical dpad buttons to change position of the servo</li>
+<li>Use horizontal dpad buttons to switch between servos</li>
+</ul>
+<p>Here is an example:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l0d-jporz_E?si=hKXBzUoVt6YBA2ON" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
